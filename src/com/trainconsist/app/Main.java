@@ -6,16 +6,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //preserve insertion order and uniqueness
-        Set<String> formation=new LinkedHashSet<>();
+        //bogie -> capacity
+        Map<String,Integer> capacityMap=new HashMap<>();
 
-        formation.add("Engine");
-        formation.add("Sleeper");
-        formation.add("Cargo");
-        formation.add("Guard");
-        formation.add("Sleeper");
+        capacityMap.put("Sleeper",72);
+        capacityMap.put("AC chair",56);
+        capacityMap.put("First class",24);
 
-        //duplicate sleeper ignored
-        System.out.println(formation);
+        for (Map.Entry<String,Integer> entry:capacityMap.entrySet()){
+            System.out.println("Bogie: "+entry.getKey()+ "No of seats available: "+entry.getValue());
+        }
+
     }
 }
