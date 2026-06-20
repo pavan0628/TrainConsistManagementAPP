@@ -1,40 +1,24 @@
 package com.trainconsist.app;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        //ArrayList to store passanger bogies
-        List<String> passangerBogies=new ArrayList<>();
+        //stores uniqiue bogie ids
+        Set<String> bogieIds=new HashSet<>();
 
-        //add passanger bogies
-        passangerBogies.add("Sleeper");
-        passangerBogies.add("AC chair");
-        passangerBogies.add("First class");
+        //Add ids
+        bogieIds.add("BG101");
+        bogieIds.add("BG102");
+        bogieIds.add("BG101");
 
-
-        //print list after insertion
-        System.out.println("After addition: "+passangerBogies);
-
-
-        //remove AC Chair
-        passangerBogies.remove("AC chair");
-
-
-        //check whether the sleep exists
-        boolean exists=passangerBogies.contains("Sleeper");
-
-        System.out.println("Sleepr exists: "+exists);
-
-        //final state
-        System.out.println("Final list: "+passangerBogies);
-
-
-
-
+        //Duplicates BG101 automatically ignored
+        System.out.println("Unique bogie IDs "+ bogieIds);
 
 
     }
