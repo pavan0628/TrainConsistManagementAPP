@@ -1,24 +1,32 @@
 package com.trainconsist.app;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        //stores uniqiue bogie ids
-        Set<String> bogieIds=new HashSet<>();
+        //represents train consist
+        LinkedList<String> consist=new LinkedList<>();
 
-        //Add ids
-        bogieIds.add("BG101");
-        bogieIds.add("BG102");
-        bogieIds.add("BG101");
+        //add bogies
+        consist.add("Engine");
+        consist.add("Sleeper");
+        consist.add("AC");
+        consist.add("Cargo");
+        consist.add("Guard");
 
-        //Duplicates BG101 automatically ignored
-        System.out.println("Unique bogie IDs "+ bogieIds);
+        //Insert pantry at index2
+        consist.add(2,"Pantry Car");
+
+        //remove first bogie
+        consist.removeFirst();
+
+        //remove last bogie
+        consist.removeLast();
+
+        //final consist
+        System.out.println("Final list: "+consist);
 
 
     }
