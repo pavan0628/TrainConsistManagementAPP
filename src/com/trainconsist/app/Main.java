@@ -6,28 +6,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //represents train consist
-        LinkedList<String> consist=new LinkedList<>();
+        //preserve insertion order and uniqueness
+        Set<String> formation=new LinkedHashSet<>();
 
-        //add bogies
-        consist.add("Engine");
-        consist.add("Sleeper");
-        consist.add("AC");
-        consist.add("Cargo");
-        consist.add("Guard");
+        formation.add("Engine");
+        formation.add("Sleeper");
+        formation.add("Cargo");
+        formation.add("Guard");
+        formation.add("Sleeper");
 
-        //Insert pantry at index2
-        consist.add(2,"Pantry Car");
-
-        //remove first bogie
-        consist.removeFirst();
-
-        //remove last bogie
-        consist.removeLast();
-
-        //final consist
-        System.out.println("Final list: "+consist);
-
-
+        //duplicate sleeper ignored
+        System.out.println(formation);
     }
 }
